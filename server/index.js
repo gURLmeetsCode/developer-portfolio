@@ -6,7 +6,6 @@ const app = express()
 const PORT = 5001
 
 
-
 // Logging middleware
 app.use(morgan('dev'))
 
@@ -15,18 +14,16 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 
-// auth mount + routes
-// app.use('/auth', require('./routes/auth'))
+
 
 // Static middleware
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
 
 
-// For all GET requests that aren't to an API route,
-// we will send the index.html!
-app.get('/*', (req, res, next) => {
-  res.sendFile(path.join(__dirname, '..', 'index.html'))
+// sends index.html
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
 })
 
 // Handle 404s
