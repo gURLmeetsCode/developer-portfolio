@@ -6,10 +6,7 @@ import Welcome from './components/Welcome'
 import About from './components/About'
 import ContactForm from './components/ContactForm'
 import Projects from './components/Projects'
-import {default as NotFound} from './components/NotFound'
 
-
-import './index.css';
 
 
 ReactDOM.render(
