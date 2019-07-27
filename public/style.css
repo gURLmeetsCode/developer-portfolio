@@ -323,10 +323,9 @@ body{
     justify-content:space-around;
     list-style-type:none;
     position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .social-nav__row--footer{
