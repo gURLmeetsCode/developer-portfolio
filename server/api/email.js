@@ -1,6 +1,8 @@
 const router = require('express').Router()
 const nodemailer = require('nodemailer');
-require('../../secrets.js')
+
+if (process.env.NODE_ENV !== 'production') require('../../secrets.js')
+
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
