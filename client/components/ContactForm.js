@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom'
+import axios from 'axios';
 
 
 
@@ -8,14 +9,37 @@ class ContactForm extends React.Component{
   constructor(){
     super()
       this.state = {
-        firstName: '',
-        lastName: '',
+        fullName: '',
         email: '',
-        message: '',
-        show: false,
-        setShow: false
+        text: ''
       }
+      this.handleSubmit = this.handleSubmit.bind(this)
+      this.handleChange = this.handleChange.bind(this)
   }
+
+  async handleSubmit(e){
+    e.preventDefault()
+    await axios.post('http://localhost:4000/api/email', this.state)
+    .then(function(response){
+      console.log(response)
+    })
+    .catch(function(err){
+      console.error(err, "On no, looks like something is wrong with your submit")
+    })
+    this.setState({
+      fullName: '',
+      email: '',
+      text: ''
+    })
+    this.props.history.push('/')
+  }
+
+  handleChange(e){
+     this.setState({
+       [e.target.name]: e.target.value
+     })
+  }
+
 
   render(){
     return(
@@ -39,53 +63,40 @@ class ContactForm extends React.Component{
             </div>
           </div>
         </div>
-        <h2 className="header--sm">Would like to hire me for your project? </h2>
-          <form className="submission-form">
-         <label>First Name</label>
+        <h2 className="header--lg">Let's Talk</h2>
+        <form className="submission-form">
+          <label>Full Name</label>
+            <input
+              name="fullName"
+              type="text"
+              value={this.state.fullName}
+              onChange={this.handleChange}
+            />
+       <label>Email</label>
          <input
-           type="text"
-           name="firstName"
-           value={this.state.firstName}
-           onChange={evt => this.setState({firstName: evt.target.value})}
-         />
-         <label>Last Name</label>
-         <input
-           type="text"
-           name="lastName"
-           value={this.state.lastName}
-           onChange={evt => this.setState({lastName: evt.target.value})}
-         />
-         <label>Email</label>
-         <input
-           type="email"
+           placeholder="Your email address goes here"
            name="email"
+           type="text"
            value={this.state.email}
-           onChange={evt => this.setState({email: evt.target.value})}
+           onChange={this.handleChange}
          />
+
        <label>Message</label>
          <textarea
-           type="text"
-           name="message"
-           value={this.state.message}
-           onChange={evt => this.setState({message: evt.target.value})}
+           name="text"
+           placeholder="Say something 🦄"
+           value={this.state.text}
+           onChange={this.handleChange}
          ></textarea>
          <Button
-           type="button"
+           onClick={this.handleSubmit}
+           type="submit"
            variant="dark"
            className="submit-btn"
            size="lg" block
            disabled={
-             !this.state.firstName || !this.state.lastName || !this.state.email
+             !this.state.fullName || !this.state.email || !this.state.text
            }
-           onClick={() => {
-             this.props.history.push('/')
-             this.setState({
-               firstName: '',
-               lastName: '',
-               email: '',
-               message: ''
-             })
-           }}
          >
            Send
          </Button>

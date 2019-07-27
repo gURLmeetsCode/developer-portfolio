@@ -378,6 +378,14 @@ textarea{
 
 }
 
+.header--lg{
+  text-align: center;
+  font-size: 52px;
+  text-transform: uppercase;
+  color: rgba(20, 26, 36, 1);;
+}
+
+
 .header--sm--light{
   text-align: center;
   font-size: 32px;

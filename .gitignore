@@ -11,3 +11,4 @@ npm-debug.log
 # OSX
 .DS_Store
 sendgrid.env
+secrets.js

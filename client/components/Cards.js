@@ -18,8 +18,8 @@ const Cards = () => (
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Card.Link href="#">Github Repo</Card.Link>
-            <Card.Link href="#">Heroku Site</Card.Link>
+            <Card.Link href="https://github.com/teenage-soup-for-the-chicken-soul/pollypocket">Github Repo</Card.Link>
+            <Card.Link href="https://pollypocket-gracehopper.herokuapp.com">Heroku Site</Card.Link>
           </Card.Footer>
         </Card>
         <Card>
@@ -33,8 +33,8 @@ const Cards = () => (
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Card.Link href="#">Github Repo</Card.Link>
-            <Card.Link href="#">Heroku Site</Card.Link>
+            <Card.Link href="https://github.com/gURLmeetsCode/cryptocurr_portfolio">Github Repo</Card.Link>
+            <Card.Link href="https://git.heroku.com/shrouded-headland-65585.git">Heroku Site</Card.Link>
           </Card.Footer>
         </Card>
         <Card>
@@ -48,8 +48,7 @@ const Cards = () => (
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Card.Link href="#">Github Repo</Card.Link>
-            <Card.Link href="#">Heroku Site</Card.Link>
+            <Card.Link href="https://github.com/the-silver-snakesss/gracessshopper">Github Repo</Card.Link>
           </Card.Footer>
         </Card>
       </CardDeck>

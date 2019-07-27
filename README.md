@@ -18,7 +18,7 @@ To get started
 ```
 npm install
 ```
-Visit localhost:5001
+Visit localhost:4000
 
 
 ## Deployment
