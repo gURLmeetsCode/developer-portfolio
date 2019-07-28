@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Loadable from 'react-loadable'
 import Spinner from 'react-bootstrap/Spinner'
 
-// import ContactForm from './components/ContactForm'
 
 
 const Welcome = Loadable({
@@ -13,8 +12,7 @@ const Welcome = Loadable({
     return <div>
       <h4>Content is loading</h4>
       <Spinner animation="border" variant="secondary" /></div>
-  },
-  timeout: 10000, // 10 seconds
+  }
 })
 
 const About = Loadable({
@@ -34,8 +32,7 @@ const ContactForm = Loadable({
     return <div>
       <h4>Content is loading</h4>
       <Spinner animation="border" variant="secondary" /></div>
-  },
-  timeout: 10000, // 10 seconds
+  }
 })
 
 const Projects = Loadable({
@@ -44,8 +41,7 @@ const Projects = Loadable({
     return <div>
       <h4>Content is loading</h4>
       <Spinner animation="border" variant="secondary" /></div>
-  },
-  timeout: 10000, // 10 seconds
+  }
 })
 
 
