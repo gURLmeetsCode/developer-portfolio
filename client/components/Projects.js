@@ -5,8 +5,9 @@ import Cards from './Cards'
 import {Link} from 'react-router-dom'
 
 
-const Projects = () => (
-    <div className="background">
+export default function Projects () {
+  return (
+     <div className="background">
       <div className="menu-wrap">
         <input type="checkbox" className="toggler"/>
         <div className="hamburger">
@@ -35,6 +36,5 @@ const Projects = () => (
         <Cards />
       </div>
     </div>
-);
-
-module.exports = Projects;
+  )
+};

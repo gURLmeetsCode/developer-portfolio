@@ -1,11 +1,53 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Loadable from 'react-loadable'
+import Spinner from 'react-bootstrap/Spinner'
 
-import Welcome from './components/Welcome'
-import About from './components/About'
-import ContactForm from './components/ContactForm'
-import Projects from './components/Projects'
+// import ContactForm from './components/ContactForm'
+
+
+const Welcome = Loadable({
+  loader: () => import('./components/Welcome'),
+  loading() {
+    return <div>
+      <h4>Content is loading</h4>
+      <Spinner animation="border" variant="secondary" /></div>
+  },
+  timeout: 10000, // 10 seconds
+})
+
+const About = Loadable({
+  loader: () => import('./components/About'),
+  loading() {
+    return <div>
+      <h4>Content is loading</h4>
+      <Spinner animation="border" variant="secondary" />
+    </div>
+  },
+  timeout: 10000
+})
+
+const ContactForm = Loadable({
+  loader: () => import('./components/ContactForm'),
+  loading() {
+    return <div>
+      <h4>Content is loading</h4>
+      <Spinner animation="border" variant="secondary" /></div>
+  },
+  timeout: 10000, // 10 seconds
+})
+
+const Projects = Loadable({
+  loader: () => import('./components/Projects'),
+  loading() {
+    return <div>
+      <h4>Content is loading</h4>
+      <Spinner animation="border" variant="secondary" /></div>
+  },
+  timeout: 10000, // 10 seconds
+})
+
 
 
 

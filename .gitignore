@@ -2,8 +2,17 @@
 node_modules/*
 
 # Compiled JS
-public/bundle.js
-public/bundle.js.map
+public/0.bundle.js
+public/1.bundle.js
+public/2.bundle.js
+public/3.bundle.js
+public/4.bundle.js
+public/5.bundle.js
+public/main.bundle.js
+public/manifest.bundle.js
+public/vendor.bundle.js
+
+
 
 
 # NPM errors

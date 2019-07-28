@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 
 
-const About = () => (
-  <div className="">
+export default function About () {
+  return (
+    <div className="">
       <div className="menu-wrap">
         <input type="checkbox" className="toggler"/>
         <div className="hamburger">
@@ -74,6 +75,5 @@ const About = () => (
        </div>
     </section>
   </div>
-);
-
-module.exports = About;
+  )
+};

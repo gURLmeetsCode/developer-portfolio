@@ -83,16 +83,17 @@ body{
   font-size: 1.3rem;
 }
 
-.btn{
+.main-btn{
   display: inline-block;
   border: none;
   color: #FFF;
   background-color: rgba(20, 26, 36, 1);
   padding: 0.75rem 1.5rem;
-  text-decoration: none
+  text-decoration: none;
+  margin-top: 20px;
 }
 
-.btn:hover{
+.main-btn:hover{
   opacity: 0.7;
   transition: opacity 1s ease-in;
   color: #EEE;
@@ -283,7 +284,7 @@ body{
 
 
 .p-img2{
-  background-image:url('/assets/images/launchday.jpeg');
+  background-image:url('/assets/images/launchday.jpg');
   min-height:400px;
 }
 

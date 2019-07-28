@@ -3,18 +3,21 @@ import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom'
 import axios from 'axios';
 
+import Notifications, { notify } from './Notifications'
 
-
-class ContactForm extends React.Component{
+export default class ContactForm extends React.Component{
   constructor(){
     super()
       this.state = {
         fullName: '',
         email: '',
-        text: ''
+        text: '',
+        clicked: false
       }
       this.handleSubmit = this.handleSubmit.bind(this)
       this.handleChange = this.handleChange.bind(this)
+      this.onClick = this.onClick.bind(this)
+
   }
 
   async handleSubmit(e){
@@ -29,7 +32,8 @@ class ContactForm extends React.Component{
     this.setState({
       fullName: '',
       email: '',
-      text: ''
+      text: '',
+      clicked: false
     })
     this.props.history.push('/')
   }
@@ -40,10 +44,16 @@ class ContactForm extends React.Component{
      })
   }
 
+  onClick(){
+    notify("this is a notification")
+    this.setState({
+      clicked: true
+    })
+  }
 
   render(){
     return(
-      <div className="">
+      <div>
         <div className="menu-wrap">
           <input type="checkbox" className="toggler"/>
           <div className="hamburger">
@@ -64,7 +74,13 @@ class ContactForm extends React.Component{
           </div>
         </div>
         <h2 className="header--lg">Let's Talk</h2>
-        <form className="submission-form">
+        {this.state.clicked ? (
+              <Notifications />
+          ) : (
+          <div>
+          </div>)
+        }
+        <form onSubmit={this.handleSubmit} className="submission-form">
           <label>Full Name</label>
             <input
               name="fullName"
@@ -88,22 +104,18 @@ class ContactForm extends React.Component{
            value={this.state.text}
            onChange={this.handleChange}
          ></textarea>
-         <Button
-           onClick={this.handleSubmit}
+       <button
+           onClick={this.onClick}
+           className="main-btn"
            type="submit"
-           variant="dark"
-           className="submit-btn"
-           size="lg" block
            disabled={
              !this.state.fullName || !this.state.email || !this.state.text
            }
          >
            Send
-         </Button>
+         </button>
        </form>
       </div>
     )
   }
 }
-
-module.exports = ContactForm;

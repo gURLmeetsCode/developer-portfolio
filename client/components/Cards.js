@@ -4,8 +4,9 @@ import Button from 'react-bootstrap/Button';
 import CardDeck from 'react-bootstrap/CardDeck'
 
 
-const Cards = () => (
-    <div className="card-group">
+export default function Cards (){
+    return (
+      <div className="card-group">
       <CardDeck>
         <Card>
           <Card.Body>
@@ -53,6 +54,5 @@ const Cards = () => (
         </Card>
       </CardDeck>
     </div>
-);
-
-module.exports = Cards;
+  )
+};
