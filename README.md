@@ -18,7 +18,7 @@ Visit localhost:4000
 
 ## Deployment
 
-To view [live version](http://www.somthinggoeshere.com/)
+To view [live version](https://portfolio-site-978df.firebaseapp.com)
 
 ## Built With
 
