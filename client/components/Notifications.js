@@ -62,7 +62,7 @@ export default class Notifications extends React.Component{
         this.setState({
           top: -100
         })
-      }, 2000)
+      }, 10000)
     })
   }
 

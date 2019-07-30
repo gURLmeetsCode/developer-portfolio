@@ -9,17 +9,18 @@ import Spinner from 'react-bootstrap/Spinner'
 const Welcome = Loadable({
   loader: () => import('./components/Welcome'),
   loading() {
-    return <div>
-      <h4>Content is loading</h4>
-      <Spinner animation="border" variant="secondary" /></div>
+    return <div className="loadable-container">
+      <h6 className="loadable-text">One momemnt please...</h6>
+      <Spinner animation="border" variant="secondary" />
+    </div>
   }
 })
 
 const About = Loadable({
   loader: () => import('./components/About'),
   loading() {
-    return <div>
-      <h4>Content is loading</h4>
+    return <div className="loadable-container">
+      <h6 className="loadable-text">One momemnt please...</h6>
       <Spinner animation="border" variant="secondary" />
     </div>
   },
@@ -29,18 +30,20 @@ const About = Loadable({
 const ContactForm = Loadable({
   loader: () => import('./components/ContactForm'),
   loading() {
-    return <div>
-      <h4>Content is loading</h4>
-      <Spinner animation="border" variant="secondary" /></div>
+    return <div className="loadable-container">
+      <h6 className="loadable-text">One momemnt please...</h6>
+      <Spinner animation="border" variant="secondary" />
+    </div>
   }
 })
 
 const Projects = Loadable({
   loader: () => import('./components/Projects'),
   loading() {
-    return <div>
-      <h4>Content is loading</h4>
-      <Spinner animation="border" variant="secondary" /></div>
+    return <div className="loadable-container">
+      <h6 className="loadable-text">One momemnt please...</h6>
+      <Spinner animation="border" variant="secondary" />
+    </div>
   }
 })
 

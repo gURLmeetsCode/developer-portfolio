@@ -21,3 +21,8 @@ npm-debug.log
 # OSX
 .DS_Store
 secrets.js
+
+
+.firebase
+.firebase/hosting.cHVibGlj.cache
+.firebase/

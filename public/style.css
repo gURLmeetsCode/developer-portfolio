@@ -411,3 +411,17 @@ textarea{
   height: 100%;
   width: 100%;
 }
+
+.loadable-text{
+  text-align: center;
+  font-size: 18px;
+  color: var(--overlay-color);
+}
+
+.loadable-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+}
