@@ -11,6 +11,10 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "process.env": {
+      "user":"dstre1913@gmail.com",
+      "pass":"Nvk32010"
+    }
   }
 }

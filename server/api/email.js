@@ -7,8 +7,8 @@ if (process.env.NODE_ENV !== 'production') require('../../secrets.js')
 let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.USER,
-      pass: process.env.PASS
+      user: process.env.user,
+      pass: process.env.pass
     }
 });
 
@@ -30,7 +30,7 @@ router.post('/', (req, res, next) => {
 
     var mail = {
       from: name,
-      to: process.env.USER,
+      to: process.env.user,
       subject: 'New Message from Contact Form',
       text: content
     }
